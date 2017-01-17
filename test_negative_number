@@ -1,4 +1,13 @@
-def test_negative_number(self):
-    """Is a negative number correctly determined not to be prime?"""
+def is_prime(number):
+    """Return True if *number* is prime."""
+    if number <= 1:
+        return False
+
+    for element in range(2, number):
+        if number % element == 0:
+            return False
+
+    return True
+    
     self.assertFalse(is_prime(-1))
     self.assertFalse(is_prime(-2))
